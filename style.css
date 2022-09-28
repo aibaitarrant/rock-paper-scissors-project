@@ -1,0 +1,46 @@
+body {
+    background-color:darkseagreen;
+    color: white;
+}
+
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+    gap: 20px;
+}
+
+button {
+  background-color:seagreen;
+  color: white;
+  border-radius: 90px;
+  border: none;
+  padding: 5px;
+  font-size: 1.5rem;
+  padding: 20px;
+  cursor: pointer;
+  width: 200px;
+  font-weight: bold;
+
+}
+
+.buttons {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    gap: 40px;
+}
+   
+.result-container {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    gap: 30px;  
+}
+
+h1 {
+    font-size: 4rem;
+}
