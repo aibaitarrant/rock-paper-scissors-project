@@ -1,12 +1,9 @@
 let computerScore = 0;
 let playerScore = 0;
 const buttons = document.getElementsByClassName("button");
-let result = document.getElementsByName("results");
-let scoreBoard = document.getElementsByName("scoreboard");
-let gameOver = document.getElementsByName("gameover");
-const rock = document.getElementsByClassName("rock");
-const paper = document.getElementsByClassName("paper");
-const scissors = document.getElementsByClassName("scissors");
+let result = document.getElementById("results");
+let scoreBoard = document.getElementById("scoreboard");
+let gameOver = document.getElementById("gameover");
 
 function getComputerChoice() {
   let choices = ["rock", "paper", "scissors"];
@@ -22,28 +19,33 @@ function playRound(event) {
     (playerSelection === "paper" && computerSelection === "rock") ||
     (playerSelection === "scissors" && computerSelection === "paper")
   ) {
-    playerScore += 1;
-    result.innerHTML =
-      "Player Won!" + playerSelection + "beat" + computerSelection;
-    scoreBoard.innerHTML =
-      "Player Score:" + playerScore + "Computer Score:" + computerScore;
-    if (playerScore === 5) {
-      gameOver.innerHTML = "Game Over! You won the game!";
-    } else if (playerSelection === computerSelection) {
-      result.innerHTML = "It's a tie!";
-      scoreBoard.innerHTML =
-        "Player Score:" + playerScore + "Computer Score:" + computerScore;
-    } else {
-      computerScore += 1;
-      result.innerHTML =
-        "Computer Won!" + computerSelection + "beat" + playerSelection;
-      scoreBoard.innerHTML =
-        "Player Score:" + playerScore + "Computer Score:" + computerScore;
+    playerScore++;
 
-      if (computerScore === 5) {
-        gameOver.innerHTML = "Game Over! You lost the game!";
-      }
-    }
+    result.innerHTML =
+      "Player Won! " + playerSelection + " beat " + computerSelection;
+    scoreBoard.innerHTML =
+      "Player Score: " + playerScore + " Computer Score: " + computerScore;
+  } else if (playerSelection === computerSelection) {
+    result.innerHTML = "It's a tie!";
+    scoreBoard.innerHTML =
+      "Player Score: " + playerScore + " Computer Score: " + computerScore;
+  } else {
+    computerScore++;
+
+    result.innerHTML =
+      "Computer Won! " + computerSelection + " beat " + playerSelection;
+    scoreBoard.innerHTML =
+      "Player Score: " + playerScore + " Computer Score: " + computerScore;
+  }
+
+  if (computerScore === 5) {
+    console.log("Game Over! Computer Wins");
+    gameOver.innerHTML = "Game Over! You lost the game!";
+  }
+  if (playerScore === 5) {
+    console.log("Game Over! Player Wins");
+
+    gameOver.innerHTML = "Game Over! You won the game!";
   }
 }
 buttons[0].addEventListener("click", playRound);

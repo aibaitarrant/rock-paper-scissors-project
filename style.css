@@ -1,18 +1,18 @@
 body {
-    background-color:darkseagreen;
-    color: white;
+  background-color: darkseagreen;
+  color: white;
 }
 
 .maincontainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 100px;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px;
+  gap: 20px;
 }
 
 button {
-  background-color:seagreen;
+  background-color: seagreen;
   color: white;
   border-radius: 90px;
   border: none;
@@ -22,25 +22,24 @@ button {
   cursor: pointer;
   width: 200px;
   font-weight: bold;
-
 }
 
 .buttons {
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-    gap: 40px;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  gap: 40px;
 }
-   
+
 .result-container {
-    font-size: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px;
-    gap: 30px;  
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  gap: 30px;
 }
 
 h1 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
